@@ -7,9 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class IgnoreAuthenticationInterceptor implements HandlerInterceptor {
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return false;
+        System.out.println("IgnoreAuthenticationInterceptor.prehandle() called");
+        return true;
     }
 
     @Override
