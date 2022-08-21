@@ -28,9 +28,9 @@ public class UriParser {
     private final ForLoginUserScanner forLoginUserScanner;
 
     public UriParser(
-            ControllerScanner controllerScanner,
-            ForGuestScanner forGuestScanner,
-            ForLoginUserScanner forLoginUserScanner
+        ControllerScanner controllerScanner,
+        ForGuestScanner forGuestScanner,
+        ForLoginUserScanner forLoginUserScanner
     ) {
         this.controllerScanner = controllerScanner;
         this.forGuestScanner = forGuestScanner;

@@ -64,9 +64,9 @@ public class AuthConfiguration implements WebMvcConfigurer {
 
     private UriParser getUriParser() {
         return new UriParser(
-                new ControllerScanner(parseClassesNames()),
-                new ForGuestScanner(),
-                new ForLoginUserScanner()
+            new ControllerScanner(parseClassesNames()),
+            new ForGuestScanner(),
+            new ForLoginUserScanner()
         );
     }
 

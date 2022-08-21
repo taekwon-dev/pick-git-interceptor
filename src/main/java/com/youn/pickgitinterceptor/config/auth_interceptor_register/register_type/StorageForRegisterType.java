@@ -6,7 +6,10 @@ import org.springframework.http.HttpMethod;
 public interface StorageForRegisterType {
 
     void appendTo(PathMatchInterceptor include);
+
     boolean isSatisfiedBy(RegisterType registerType);
+
     void put(String key, HttpMethod value);
+
     RegisterType getType();
 }
