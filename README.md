@@ -1,6 +1,6 @@
 # [pick-git](https://github.com/woowacourse-teams/2021-pick-git) 팀 Handler Interceptor 분석
 
-### | 분석 배경
+### | 문제 상황 
 
 ![image](https://user-images.githubusercontent.com/70354365/192001431-9da4ce39-3212-4244-8dd4-e6ae7ae69c4f.png)
 
@@ -16,11 +16,11 @@ HTTP 메소드 분기 로직을 전개하기 위해 각 핸들러 인터셉터�
 [ 그림 2 ]
 
 이러한 문제 배경에는 핸들러 인터셉터를 통과할 API를 지정하는 방식이 [ 그림 2 ] 처럼 문자열 기반으로 API URL을 지정하는 것 외에 다른 방법이 없다는 점이 있다.
-따라서 위에서 정의한 문제를 해결하기 위해서는 `API URL + HTTP 메소드` 정보를 한 단위로해서 통과할 핸들러 인터셉터를 지정할 수 있어야 했고,
+따라서 위에서 정의한 문제를 해결하기 위해서는 `API URL + HTTP 메소드` 정보를 한 단위로 통과할 핸들러 인터셉터를 지정할 수 있어야 했고,
 Java Annotation, Reflection 과 디자인 패턴 중 Proxy Pattern 을 활용해 이 문제를 해결한 [pick-git](https://github.com/woowacourse-teams/2021-pick-git) 팀을 알게 돼서 관련 내용을 정리하게 됐다.
 
 
-### | 핵심 아이디어
+### | 문제 해결 핵심 아이디어
 
 ● Java Annotation
 
